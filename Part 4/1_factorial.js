@@ -9,3 +9,22 @@
 // 3!: 3 * 2 * 1 = 6
 // 4!: 4 * 3 * 2 * 1 = 24
 // 0!: 1
+
+function factorialNum(InputNum) {
+  if (InputNum < 0) {
+    throw new Error("InputNumber should be greater than or equal to zero");
+  }
+  let result = 1;
+  for (let i = 1; i <= InputNum; i++) {
+    result = result * i;
+  }
+  return result;
+}
+
+console.log(factorialNum(20));
+console.log(factorialNum(7));
+console.log(factorialNum(3));
+console.log(factorialNum(22));
+console.log(factorialNum(0));
+console.log(factorialNum(-1));
+console.log(factorialNum(77));
