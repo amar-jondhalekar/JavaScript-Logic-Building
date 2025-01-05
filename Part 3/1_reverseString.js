@@ -9,9 +9,9 @@ console.log(reverseString("Amar Jondhalekar"));
 
 // 2nd way
 function reverseAString(inputString) {
-  if (typeof inputString !== "string") {
-    throw new Error("Only strings are allowed");
-  }
+  //   if (typeof inputString !== "string") {
+  //     throw new Error("Only strings are allowed");
+  //   }
   let reverseString = "";
   for (let i = inputString.length - 1; i >= 0; i--) {
     // console.log(inputString[i]);
@@ -23,3 +23,14 @@ function reverseAString(inputString) {
 console.log(reverseAString("Amar"));
 console.log(reverseAString("Jondhalekar"));
 console.log(reverseAString(7070));
+
+// 3rd Way
+
+function reverseString3(inputString) {
+  let splittedString = inputString.split("");
+  let reverse = splittedString.reverse();
+  let reverseString = reverse.join("");
+  console.log(reverseString);
+}
+
+reverseString3("Happy New Year");
