@@ -6,3 +6,15 @@ function reverseString(string) {
 }
 
 console.log(reverseString("Amar Jondhalekar"));
+
+// 2nd way
+function reverseAString(inputString) {
+  let reverseString = "";
+  for (let i = inputString.length - 1; i >= 0; i--) {
+    // console.log(inputString[i]);
+    reverseString = reverseString + inputString[i];
+  }
+  return reverseString;
+}
+
+console.log(reverseAString("Amar"));
