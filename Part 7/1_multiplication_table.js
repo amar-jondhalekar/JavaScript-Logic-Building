@@ -39,3 +39,15 @@ function mul2(mFirst, mLast) {
   return result;
 }
 console.log("Multiplication Table using Ternary: ", mul2(4, 20));
+
+// 3rd way: Print result directly using for loop
+function mul3(mOf, mTo) {
+  for (
+    let i = mOf, multiplier = 1;
+    multiplier <= mTo, i <= mOf * mTo;
+    i = i + mOf, multiplier++
+  ) {
+    console.log(`Mul of ${mOf} * ${multiplier} is :${i}`);
+  }
+}
+mul3(4, 10);
