@@ -33,6 +33,19 @@ function sumOfDigit1(input) {
 }
 console.log(sumOfDigit1(77));
 
+// 3rd way:
+function calculateSumOfDigit(inputNum) {
+  let number = inputNum;
+  let sumOfDigit = 0;
+  while (number > 0) {
+    let lastDigit = number % 10;
+    number = Math.floor(number / 10);
+    sumOfDigit = sumOfDigit + lastDigit;
+  }
+  return sumOfDigit;
+}
+
+console.log(calculateSumOfDigit(12));
 // 12 = 1 + 2 = 3
 // store = input[0] + input[1];
 
