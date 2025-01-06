@@ -28,3 +28,7 @@ console.log(factorialNum(22));
 console.log(factorialNum(0));
 console.log(factorialNum(-1));
 console.log(factorialNum(77));
+
+// 2nd Way : Recursion
+// calls the function repeatedly until it reaches the base case (n = 0 or n = 1)
+// Simpler to write but may hit stack limits for very large numbers
