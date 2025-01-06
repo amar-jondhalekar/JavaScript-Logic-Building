@@ -18,6 +18,21 @@ function sumOfDigit(input) {
 let number = 456;
 console.log(sumOfDigit(number));
 
+// 2nd way:
+function sumOfDigit1(input) {
+  let str = input.toString();
+  //   console.log(str);
+  let splitting = str.split("");
+  //   console.log(splitting);
+  let sum = 0;
+  splitting.forEach((num) => {
+    sum = sum + parseInt(num);
+  });
+
+  return sum;
+}
+console.log(sumOfDigit1(77));
+
 // 12 = 1 + 2 = 3
 // store = input[0] + input[1];
 
