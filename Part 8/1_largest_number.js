@@ -2,8 +2,10 @@
 // Input: Array of numbers
 // Return: Biggest number
 // Example: [3, 6, 1, 8, 3, 7]
+// 1st way:
 function largestNumberInArr(arr) {
-  if (arr.length === 0) {
+  let hasString = arr.some((item) => typeof item === "string");
+  if (hasString || !arr || arr.length === 0) {
     throw new Error("We need some numbers in the array!");
   }
 
@@ -26,4 +28,17 @@ console.log(
   "Largest Array Number: ",
   largestNumberInArr([7, 84, 16, 38, 45, 76])
 );
+// console.log("Null: ", largestNumberInArr(null));
 // console.log("Empty number: ", largestNumberInArr([]));
+
+// console.log("String: ", largestNumberInArr([22, 11, 44, 55, 66, 77, "Amar"]));
+
+// 2nd way: Using Math.max()
+
+function findBiggestNum(arrOfNum) {
+  const maxNumber = Math.max(...arrOfNum);
+  console.log(maxNumber);
+  return maxNumber;
+}
+
+console.log("findBiggestNum: ", findBiggestNum([45, 66, 77, 23, 12, 77]));
