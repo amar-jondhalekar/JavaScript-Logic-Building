@@ -3,22 +3,27 @@
 // Return: Biggest number
 // Example: [3, 6, 1, 8, 3, 7]
 function largestNumberInArr(arr) {
-  let large = arr[0];
+  if (arr.length === 0) {
+    throw new Error("We need some numbers in the array!");
+  }
+
+  let biggestNum = arr[0];
   for (let i = 1; i < arr.length; i++) {
-    if (arr[i] > large) {
+    if (arr[i] > biggestNum) {
       //   console.log("arr[i]", arr[i]);
       //   console.log("larg", large);
-      large = arr[i];
+      biggestNum = arr[i];
     }
   }
-  return large;
+  return biggestNum;
   //   arr.forEach((num) => {
   //     console.log(num);
   //   });
 }
 
-console.log("Largest Array Number:", largestNumberInArr([3, 6, 1, 8, 3, 7]));
+console.log("Largest Array Number: ", largestNumberInArr([3, 6, 1, 8, 3, 7]));
 console.log(
-  "Largest Array Number:",
+  "Largest Array Number: ",
   largestNumberInArr([7, 84, 16, 38, 45, 76])
 );
+// console.log("Empty number: ", largestNumberInArr([]));
