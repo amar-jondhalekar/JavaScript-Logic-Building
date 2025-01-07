@@ -51,3 +51,19 @@ function mul3(mOf, mTo) {
   }
 }
 mul3(4, 10);
+
+// 4th way: while loop
+
+function mult(mFirst, mLast) {
+  let result = [];
+  let i = 1;
+  do {
+    result.push(i <= mLast ? mFirst * i : false);
+    i++;
+  } while (i <= mLast);
+  {
+    return result;
+  }
+}
+
+console.log(mult(4, 10));
