@@ -17,6 +17,7 @@ function factorNumber(fact) {
   console.log(fact);
   let factor = [];
   for (let i = 1; i <= fact; i++) {
+    console.log(i);
     if (fact % i === 0) {
       factor.push(i);
     }
