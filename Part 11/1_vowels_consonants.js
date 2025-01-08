@@ -29,7 +29,7 @@ function countVowelAndConsonant(inputStr) {
 console.log(countVowelAndConsonant("Hello World!"));
 console.log(countVowelAndConsonant("Amar Jondhalekar"));
 
-// 2nd Way:
+// 2nd Way:Detailed log
 
 function countVowelAndCon(inputStr) {
   inputStr = inputStr.toLowerCase();
