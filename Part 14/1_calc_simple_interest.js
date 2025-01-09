@@ -11,7 +11,8 @@
 // - 20000, 10%, 5 year = (20000 * 10 * 5)/100 = 10000
 function interestLoan(principleAmount, interestRate, timeDuration) {
   let simpleInterest = (principleAmount * interestRate * timeDuration) / 100;
-  return simpleInterest;
+  let finalResult = simpleInterest.toFixed(2);
+  return finalResult;
 }
 
-console.log(interestLoan(20000, 10.5, 5));
+console.log(interestLoan(20000.777, 10.77775, 5));
