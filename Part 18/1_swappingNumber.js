@@ -26,17 +26,17 @@ swapTowNumber(7, 4);
 // interchangeNumber(4, 7);
 
 // 2nd Way: Without 3rd variable using addition and substraction
-
+// Does not work with all data types like string
 function interchangeTwoNumber(a, b) {
-  a = a + b;
-  console.log(a);
-  b = a - b;
-  console.log(b);
-  a = a - b;
-  console.log(a);
+  a = a + b; // 4 + 7
+  console.log(a); // 11
+  b = a - b; // 11 - 7
+  console.log(b); // 4
+  a = a - b; // 11 - 4
+  console.log(a); // 7
   console.log(
     `The interchange of value a and b are without using third variable: a:${a} and b:${b}`
-  );
+  ); // 7 4
 }
 
 interchangeTwoNumber(4, 7);
