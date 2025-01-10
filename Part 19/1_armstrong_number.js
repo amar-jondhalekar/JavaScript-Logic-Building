@@ -27,6 +27,7 @@ console.log(checkArmstrongNumber(153));
 
 // 2nd Way:
 function checkArmStrong(armstrong) {
+  // Convert the number to a string and split into digits
   let splitting = armstrong.toString().split("");
 
   let result = splitting
