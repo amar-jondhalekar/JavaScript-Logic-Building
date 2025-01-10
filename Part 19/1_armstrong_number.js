@@ -35,7 +35,7 @@ function checkArmStrong(armstrong) {
     .map(Number) // Convert each digit to a number
     .map((digit) => digit ** splitting.length) // Raise each digit to the power of the number of digits
     .reduce((a, b) => a + b, 0); // Sum all the powers
-
+  // Check if the sum equals the original number
   return result === armstrong;
 }
 
