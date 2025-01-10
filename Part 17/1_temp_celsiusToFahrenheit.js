@@ -9,6 +9,7 @@
 function celsiusToFahrenheit(degree) {
   let result = degree * (9 / 5);
   let fahrenheit = result + 32;
+  fahrenheit = Math.round(fahrenheit); // Calculate round figure of fahrenheit
   return fahrenheit;
 }
 
