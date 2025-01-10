@@ -30,6 +30,7 @@ function checkArmStrong(armstrong) {
   // Convert the number to a string and split into digits
   let splitting = armstrong.toString().split("");
 
+  // Calculate the Armstrong sum
   let result = splitting
     .map(Number)
     .map((digit) => digit ** splitting.length)
