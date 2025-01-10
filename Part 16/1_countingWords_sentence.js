@@ -32,7 +32,9 @@ console.log(countWords("This is a sentence"));
 
 // 3rd Way:
 function countWord(sentence) {
-  console.log(sentence);
+  console.log("Before the trim:", sentence);
+  sentence = sentence.trim(); // To remove before and after the space in sentence
+  console.log("After the trim:", sentence);
   const splittedSentence = sentence.split(" ");
   console.log(splittedSentence);
   const nonEmptyElement = splittedSentence.filter((element) => element != "");
@@ -41,3 +43,7 @@ function countWord(sentence) {
 }
 console.log("This is a sentence:", countWord("This is a sentence"));
 console.log("What is the  date today", countWord("What is the  date today"));
+console.log(
+  "  What is the  date today  ",
+  countWord("  What is the  date today  ")
+);
