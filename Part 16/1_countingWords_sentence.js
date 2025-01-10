@@ -3,19 +3,18 @@
 // Return: number of words
 
 // function countWord(sentence) {
-//   let words = sentence.split("");
-//   if (sentence.includes(" ")) {
-//     let skip = sentence.split("");
-//     return skip;
+//   let wordsCount = 0;
+//   if (sentence === " ") {
+//     return true;
 //   }
-//   for (let i = 0; i <= sentence.length; i++) {
-//     console.log(sentence[i]);
-//   }
-//   return sentence.length;
+//   //   for (let i = 0; i <= sentence.length; i++) {
+//   //     console.log(sentence[i]);
+//   //   }
 // }
 
 // console.log(countWord("Amar Jondhalekar"));
 
+// 2nd Way:
 function countWords(sentence) {
   if (typeof sentence !== "string" || sentence.trim() === "") {
     return 0; // return 0 for invalid or empty input
@@ -30,3 +29,15 @@ console.log(countWords(1));
 console.log(countWords(""));
 console.log(countWords("What is the date today"));
 console.log(countWords("This is a sentence"));
+
+// 3rd Way:
+function countWord(sentence) {
+  console.log(sentence);
+  const splittedSentence = sentence.split(" ");
+  console.log(splittedSentence);
+  const nonEmptyElement = splittedSentence.filter((element) => element != "");
+  console.log("nonEmptyElement", nonEmptyElement);
+  return splittedSentence.length;
+}
+console.log("This is a sentence:", countWord("This is a sentence"));
+console.log("What is the  date today", countWord("What is the  date today"));
