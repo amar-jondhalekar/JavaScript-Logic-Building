@@ -40,3 +40,33 @@ function checkArmStrong(armstrong) {
 }
 
 console.log(checkArmStrong(153));
+
+// 3rd Way:
+console.log("3rd way");
+
+function armStrongNum(input) {
+  let number = input;
+  const digits = [];
+  while (number > 0) {
+    let lastDigit = number % 10;
+    console.log("Last Digit", lastDigit);
+    number = Math.floor(number / 10);
+    console.log("New number", number);
+    digits.push(lastDigit);
+  }
+  const length = digits.length;
+  console.log("Length:", length);
+  let sum = 0;
+  digits.forEach((d) => {
+    console.log(d, length, Math.pow(d, length));
+    sum = sum + Math.pow(d, length);
+  });
+  console.log(sum);
+  return sum === input;
+}
+
+console.log(armStrongNum(153));
+console.log(armStrongNum(371));
+console.log(armStrongNum(370));
+console.log(armStrongNum(18272));
+console.log(armStrongNum(747789));
