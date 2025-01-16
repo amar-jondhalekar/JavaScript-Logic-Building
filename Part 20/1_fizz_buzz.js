@@ -66,6 +66,12 @@
 
 // console.log(fizzBuzz(36));
 
+// Logic: Example 36
+// Use Modulus operator
+// - n % 3 is zero then fizz
+// - n % 5 is zero then Buzz
+// - n % 3 && n % 5 both are zero then print FizzBuzz
+
 function fizzBuzz(inputNumber) {
   console.log(`Input Number: ${inputNumber}`);
   let result = [];
